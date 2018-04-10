@@ -7,6 +7,15 @@ const zoom = 14;
 const map = new MapWrapper(container, startPoint, zoom);
 
 map.addMarker(startPoint);
-}
+map.addInfoWindow();
+
+
+
+
+
+
+
+
+};
 
 window.addEventListener('DOMContentLoaded', initialize)

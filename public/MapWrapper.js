@@ -13,3 +13,15 @@ MapWrapper.prototype.addMarker = function(coordinates){
   })
   this.markers.push(marker);
 }
+
+
+MapWrapper.prototype.addInfoWindow = function () {
+  let infowindow = new google.maps.InfoWindow({
+    content: "My Home"
+  });
+ for(marker of this.markers){
+   marker.addListener('click', function(){
+    infowindow.open(this.googleMap, marker);
+  })
+};
+}
